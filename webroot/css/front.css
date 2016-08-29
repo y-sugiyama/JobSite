@@ -1,0 +1,184 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016/08/11, 13:58:34
+    Author     : sugiyamayuriko
+*/
+
+/*top.ctp*/
+
+body{
+    font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+
+}
+
+.topimage {
+    /*webroot/css配下のどこか､という記述になる*/
+      background: url("/img/topimage.jpg");
+      background-position: center center;
+      /*画像を画面に合わせて最小サイズで表示*/
+      background-size: contain;
+      height: 700px;
+      color: #fff;
+      /*親要素*/
+      position: relative;
+    }
+    
+    .squere{
+        background-color: gold;
+        /*透過性*/
+        opacity: 0.8;
+        padding: 15px 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height:150px;
+        /*左寄せする要素を、親要素を基準left:0の絶対位置に配置する。*/
+        position: absolute; left: 0
+        
+    }
+    
+
+.col-lg-4 {
+     padding: 40px 40px;
+    padding-bottom: 70px;
+    text-align:center;
+    
+}
+
+.col-lg-4 h2{
+    padding-bottom: 20px;
+    text-align:center;
+  
+}
+
+.col-lg-4 p{
+     display:table-cell;
+    text-align:left;
+    vertical-align:middle;
+}
+
+.glyphicon-tree-deciduous{
+    font-size: 40px;
+}
+.glyphicon-eye-open{
+    font-size: 40px;
+}
+.glyphicon-tower{
+    font-size: 40px;
+}
+
+.panel panel-info{
+    width:80%;
+}
+.panel-title a {
+/*    display:block;*/
+}
+
+.panel-heading h4{
+display: inline;
+}
+
+.panel-heading h6{
+display: inline;
+float: right;
+margin-top:4px; 
+
+}
+/*p1.ctp*/
+
+
+
+#pageheader{
+margin-top: -20px;
+padding-left: 0;
+padding-right: 0;
+}
+
+.topbackground1{
+    padding: 70px 70px 20px 20px  ; 
+    margin: 0 auto;
+    height:350px;
+    /*background-color: skyblue;*/
+        background: url("/img/block.jpg");
+      background-position: center center;
+      /*画像を画面に合わせて最小サイズで表示*/
+      background-size: contain;
+       
+    color: #ffffff;
+    
+}
+
+/*    position: absolute; left: 0;
+    position: absolute; right: 0;*/
+
+
+.media{
+    padding: 20px 20px 20px 10px  ; 
+}
+
+.row{
+padding-top: 5px;    
+}
+
+.col-md-8{
+    
+}
+
+.col-md-4{
+    background-color: lemonchiffon;
+    padding-right:0px;
+}
+/*p2.ctp*/
+
+/*view.ctp*/
+.thumbnail{
+      padding: 20px 20px 20px 10px  ; 
+}
+
+.glyphicon-info-sign{
+    font-size: 40px;
+}
+
+#news{
+    /*背景色を透明に*/
+    background-color:  transparent;
+    margin-top: 10px;
+    
+}
+
+#news h3{
+    text-align: center;
+}
+#news h6{
+    text-align: center;
+    background-color: pink;
+}
+
+.thumbnail{
+    padding-top:10px;
+    height: 200px;
+}
+
+#contact.row{
+      margin-top: 20px;
+      
+}
+
+
+
+.panel panel-default{
+    margin-top: 10px;
+}
+
+#login.panel-heading{
+    padding: 10px 10px;
+    
+    
+}
+#login.panel-heading h4{
+
+}

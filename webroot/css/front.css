@@ -17,10 +17,10 @@ body{
 
 .topimage {
     /*webroot/css配下のどこか､という記述になる*/
-      background: url("/img/topimage.jpg");
+      background: url("/img/jobsite.jpg");
       background-position: center center;
-      /*画像を画面に合わせて最小サイズで表示*/
-      background-size: contain;
+      /*画像を画面に合わせて表示*/
+      background-size: cover;
       height: 700px;
       color: #fff;
       /*親要素*/
@@ -28,7 +28,7 @@ body{
     }
     
     .squere{
-        background-color: gold;
+        background-color: orangered;
         /*透過性*/
         opacity: 0.8;
         padding: 15px 15px;

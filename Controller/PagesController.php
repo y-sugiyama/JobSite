@@ -100,7 +100,7 @@ class PagesController extends AppController {
 
     public function top() {
         $this->loadModel('Post');
-      $this->Paginator->settings = $this->paginate;
+      $this->Paginator->settings = $this->Post->getRecent(2);
     $posts = $this->Paginator->paginate('Post');          
         $this->set('posts' , $posts);
 //        $posts = $this->Post->find('all', [

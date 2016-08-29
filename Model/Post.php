@@ -43,11 +43,11 @@ class Post extends AppModel {
     public function getRecent($limit=null) {
 
         $option = array(
-            
+            //作成日が新しい順に並べます
             'order' => array('created' => 'desc'),
             
             );
-        
+        //
          if($limit!==null){
                 $option['limit'] = $limit;
            

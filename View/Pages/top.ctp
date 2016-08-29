@@ -1,5 +1,5 @@
 <?php
-$this->assign('title', 'Sitebase Top');
+$this->assign('title', 'JobSite Top');
 ?>
 
 <!-- Jumbotron -->
@@ -9,8 +9,8 @@ $this->start('topheader');
 <div class="topimage">
     <div class="container">
         <div class="squere">
-            <h1>Sitebase Top</h1>
-            <p class="lead">コーポレートサイトの基盤となるプロジェクトです</p>
+            <h1>JobSite Top</h1>
+            <p class="lead">求人サイトの基盤となるプロジェクトです</p>
         </div>
     </div>
 </div>

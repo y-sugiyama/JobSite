@@ -41,6 +41,27 @@ $this->end();
     </div>
     <h5><?php echo $this->Html->link('もっと見る>>', array('controller'=>'pages','action' => 'news')); ?></h5>
 
+    <div class="panel-group" id="accordion">
+    <h3>求人</h3>
+    <div class="panel panel-danger" id="projectstop">
+        <?php foreach ($jobs as $job): ?>
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        <?php echo h($job['Job']['title']); ?> 
+                    </a>
+                </h4>
+                <h6><?php echo h($job['Job']['created']); ?> </h6>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <?php echo h($job['Job']['description']) ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <h5><?php echo $this->Html->link('もっと見る>>', array('controller'=>'pages','action' => 'projects')); ?></h5>
+
 <!-- Example row of columns -->
 <div class="row">
     <div class="col-lg-4" >

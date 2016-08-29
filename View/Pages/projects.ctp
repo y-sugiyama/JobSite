@@ -1,12 +1,12 @@
 <?php
-$this->assign('title', 'JobSite お知らせ詳細');
+$this->assign('title', 'JobSite 求人詳細');
 ?>
 <?php
 $this->start('topheader');
 ?>
 <div class="topbackground1">
     <div class="container">
-        <h1>JobSite お知らせ</h1>
+        <h1>JobSite 求人</h1>
         <p class="lead">  </div>
 </div>
 
@@ -19,14 +19,14 @@ $this->end();
 
 
 <div class="row">
-    <?php foreach ($posts as $post): ?>
-        <div class="col-sm-6 col-md-4" id="news">
+    <?php foreach ($jobs as $job): ?>
+        <div class="col-sm-6 col-md-4" id="projects">
             <div class="thumbnail">
                 <!--<div class="caption">-->
                     <!--<span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>-->
-                <h6> <?php echo h($post['Post']['created']); ?></h6>
-                <h3> <?php echo h($post['Post']['title']); ?> </h3>
-                <p> <?php echo h($post['Post']['body']) ?></p>
+                <h6> <?php echo h($job['Job']['created']); ?></h6>
+                <h3> <?php echo h($job['Job']['title']); ?> </h3>
+                <p> <?php echo h($job['Job']['description']) ?></p>
 
                 <!--</div>-->
             </div>

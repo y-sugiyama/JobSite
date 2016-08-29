@@ -1,5 +1,5 @@
 <?php
-$this->assign('title','SiteBase アクセス');
+$this->assign('title','JobSite アクセス');
 ?>
 <!-- Jumbotron -->
 <?php
@@ -7,7 +7,7 @@ $this->start('topheader');
 ?>
 <div class="topbackground1">
     <div class="container">
-        <h1>Sitebase 静的ページ2</h1>
+        <h1>JobSite 静的ページ2</h1>
         <p class="lead">ViewのPagesフォルダ配下にctpファイルを作成するだけで､フロントエンドのTopページから遷移する静的ページを作成できます</p>
     </div>
 </div>
@@ -27,7 +27,7 @@ $this->end();
             <p class="lead">テキスト表示のイメージです｡</p>
         </div> 
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4"  id="pages">
         <div class="media">
             <div class="media-left">
                 <img class="media-object" src="http://placehold.jp/150x75.png" alt="...">

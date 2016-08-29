@@ -115,6 +115,7 @@ class CreatePostsTable extends CakeMigration {
                     'created' => '2016-07-29'
                 ]
             ];
+            //migrationファイルにお知らせ記事を追加するたびにそのオブジェクトを生成して保存するように｡
             foreach ($datas as $data) {
                 $post = new Post();
                 $post->save($data);

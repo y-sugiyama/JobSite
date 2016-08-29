@@ -103,10 +103,10 @@ padding-right: 0;
     margin: 0 auto;
     height:350px;
     /*background-color: skyblue;*/
-        background: url("/img/block.jpg");
+        background: url("/img/brown.jpg");
       background-position: center center;
-      /*画像を画面に合わせて最小サイズで表示*/
-      background-size: contain;
+      /*画像を画面に合わせて表示*/
+      background-size: cover;
        
     color: #ffffff;
     
@@ -121,20 +121,21 @@ padding-right: 0;
 }
 
 .row{
-padding-top: 5px;    
+padding-top: 5px; 
 }
 
 .col-md-8{
     
 }
 
-.col-md-4{
+#pages.col-md-4{
     background-color: lemonchiffon;
-    padding-right:0px;
+    padding-right:5px;
+   
 }
 /*p2.ctp*/
 
-/*view.ctp*/
+/*news.ctp*/
 .thumbnail{
       padding: 20px 20px 20px 10px  ; 
 }
@@ -169,6 +170,7 @@ padding-top: 5px;
 }
 
 
+/*login.ctp*/
 
 .panel panel-default{
     margin-top: 10px;

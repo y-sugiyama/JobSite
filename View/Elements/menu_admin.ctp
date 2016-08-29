@@ -11,6 +11,9 @@
                         <li><a href="/users/index"><i class="glyphicon glyphicon-pencil"></i> ユーザ</a></li>
 
                          <li><a href="/posts/index"><i class="glyphicon glyphicon-pencil"></i>お知らせ</a></li>
+                         
+                          <li><a href="/jobs/index"><i class="glyphicon glyphicon-pencil"></i>求人</a></li>
+
 
 
 

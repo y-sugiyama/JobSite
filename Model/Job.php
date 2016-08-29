@@ -37,6 +37,7 @@ class Job extends AppModel {
      *
      * @var string
      */
+     //データベースのtitleフィールドをレコードの表題 (label) として 使う
     public $displayField = 'title';
 
     //getRecentメソッドは$optionを返します

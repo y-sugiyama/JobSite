@@ -37,6 +37,13 @@ class CreatePostsTable extends CakeMigration {
                         'null' => false,
                         'default' => null
                     ),
+                    'categori_id' => array(
+                        'type' => 'integer',
+                        'null' => false,
+                        'default' => null,
+                        'length' => 36,
+                        'key' => 'foteign',
+                    ),
                     'created' => array(
                         'type' => 'datetime'
                     ),

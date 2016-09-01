@@ -25,6 +25,7 @@ Router::connect('/pages/top', array('controller' => 'pages', 'action' => 'top'))
 Router::connect('/pages/news/*', array('controller' => 'pages', 'action' => 'news'));
 
 Router::connect('/pages/projects/*', array('controller' => 'pages', 'action' => 'projects'));
+Router::connect('/pages/view/*', array('controller' => 'pages', 'action' => 'view'));
 
 Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 

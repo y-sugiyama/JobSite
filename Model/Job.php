@@ -1,6 +1,7 @@
 <?php
 
 App::uses('AppModel', 'Model');
+App::uses('Category', 'Model');
 
 /**
  * Post Model
@@ -31,6 +32,17 @@ class Job extends AppModel {
             ),
         ),
     );
+    
+   
+ 
+       
+            public $belongsTo = array(
+        'Category' => array(
+            'className' => 'Category',
+             'foreignKey' => 'categori_id'
+          
+        )
+         );
 
     /**
      * Display field

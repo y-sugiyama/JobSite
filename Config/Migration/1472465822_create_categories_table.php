@@ -31,6 +31,12 @@ class CreateCategoriesTable extends CakeMigration {
                         'null' => false,
                         'default' => null
                     ),
+                      'created' => array(
+                        'type' => 'datetime'
+                    ),
+                    'modified' => array(
+                        'type' => 'datetime'
+                    ),
                     'tableParameters' => array(
                         'engine' => 'InnoDB',
                         'charset' => 'utf8',

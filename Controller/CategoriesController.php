@@ -50,6 +50,7 @@ class CategoriesController extends AppController {
 
         $categories = $this->Category->find('all');
         $this->set('categories', $categories);
+       
 //
 //        $this->paginate = $this->Post->getRecent(); // paginateプロパティ　
 //        $posts = $this->paginate('Post'); // こっちはpaginateメソッド

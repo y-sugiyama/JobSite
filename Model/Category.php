@@ -1,6 +1,7 @@
 <?php
 
 App::uses('AppModel', 'Model');
+App::uses('Job', 'Model');
 
 /**
  * Post Model
@@ -23,6 +24,16 @@ class Category extends AppModel {
         
         
     );
+    
+       //$hasmany プロパティに アソシエーション先のモデルのクラス名の文字列を指定する
+    //  Categoryモデルから Jobにアクセスできるように
+       public $hasMany = [
+           'Job'=>[
+               'className' => 'Job',
+                'foreignKey' => 'categori_id'
+           ]];
+
+
 
     /**
      * Display field

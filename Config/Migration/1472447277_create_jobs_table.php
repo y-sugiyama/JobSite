@@ -89,6 +89,7 @@ class CreateJobsTable extends CakeMigration {
                     'title' => 'デザイナー募集',
                     'description' => '株式会社シマウマでは､以下の要項でデザイナーを'
                     . '募集いたします｡年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                    'categori_id'=>1,
                     'created' => '2016-08-27'
                 ],
                 [
@@ -96,6 +97,7 @@ class CreateJobsTable extends CakeMigration {
                     'description' => '株式会社まるい政策研究所では､'
                     . '以下の要項でエンジニアを募集いたします｡年収800万円 '
                     . '募集人数１名 スキルセット◯◯◯◯◯◯',
+                    'categori_id'=>2,
                     'created' => '2016-08-28'
                 ],
                 [
@@ -103,7 +105,38 @@ class CreateJobsTable extends CakeMigration {
                    'description' => '株式会社ぱんだメディアでは､'
                     . '以下の要項でクリエイターを募集いたします｡'
                     . '年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                    'categori_id'=>3,
                     'created' => '2016-08-29'
+                ],
+                 [
+                    'title' => 'クリエイター募集',
+                   'description' => '株式会社ぱんだメディアでは､'
+                    . '以下の要項でクリエイターを募集いたします｡'
+                    . '年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                     'categori_id'=>4,
+                    'created' => '2016-08-27'
+                ],
+                [
+                    'title' => 'エンジニア募集',
+                    'description' => '株式会社まるい政策研究所では､'
+                    . '以下の要項でエンジニアを募集いたします｡年収800万円 '
+                    . '募集人数１名 スキルセット◯◯◯◯◯◯',
+                    'categori_id'=>1,
+                    'created' => '2016-08-26'
+                ],
+                 [
+                    'title' => 'デザイナー募集',
+                    'description' => '株式会社シマウマでは､以下の要項でデザイナーを'
+                    . '募集いたします｡年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                     'categori_id'=>2,
+                    'created' => '2016-08-25'
+                ],
+                 [
+                    'title' => 'アーキテクト募集',
+                    'description' => '株式会社カピパラでは､以下の要項でデザイナーを'
+                    . '募集いたします｡年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                     'categori_id'=>3,
+                    'created' => '2016-08-23'
                 ],
                 ];
                 foreach ($datas as $data){

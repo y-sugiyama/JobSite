@@ -140,5 +140,14 @@ class PagesController extends AppController {
 
         $this->set('jobs', $jobs);
     }
+    
+    public function view($id=null){
+         $this->loadModel('Job');
+         
+         if($this->Job->exists($id)){
+          $job = $this->Job->findById($id);
+         $this->set('job', $job);
+         }
+    }
 
 }

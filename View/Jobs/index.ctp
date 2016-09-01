@@ -26,6 +26,7 @@
                     <tr>
                         <th>タイトル</th>
                         <th>内容</th>
+                        <th>カテゴリ</th>
                         <th>作成日</th>
                         <th>アクション</th>
                     </tr>
@@ -43,6 +44,7 @@
                                 
                                             
                                 ?>&nbsp;</td>
+                            <td><?php echo h($job['Category']['name']); ?>&nbsp;</td>
                             <td><?php echo h($job['Job']['created']); ?>&nbsp;</td>
                             <td class="actions">
 

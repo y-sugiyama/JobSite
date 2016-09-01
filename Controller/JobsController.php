@@ -52,10 +52,11 @@ class JobsController extends AppController {
     
     public function index() {
         $this->Job->recursive = 0;
-//        $this->set('posts', $this->Paginator->paginate());
 
         $this->paginate = $this->Job->getRecent(); // paginateプロパティ　
         $jobs = $this->paginate('Job'); // こっちはpaginateメソッド
+       
+        
         $this->set('jobs' , $jobs);
     }
 
@@ -70,7 +71,7 @@ class JobsController extends AppController {
         if (!$this->Job->exists($id)) {
             throw new NotFoundException(__('Invalid post'));
         }
-        $options = array('conditions' => array('Post.' . $this->Job->primaryKey => $id));
+        $options = array('conditions' => array('Job.' . $this->Job->primaryKey => $id));
         $this->set('job', $this->Job->find('first', $options));
     }
 

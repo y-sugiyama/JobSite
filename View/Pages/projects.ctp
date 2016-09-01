@@ -8,6 +8,7 @@ $this->start('topheader');
     <div class="container">
         <h1>JobSite 求人</h1>
         <p class="lead">  </div>
+
 </div>
 
 <?php
@@ -16,6 +17,12 @@ $this->end();
 
 <!-- Example row of columns -->
 
+ <div class="categoryview" >
+        <h4>カテゴリ一覧</h4>
+   &nbsp;
+        <h5>Web/システム開発</h5> &nbsp; <h5>アプリ開発</h5> &nbsp; 
+        <h5>運用･保守</h5> &nbsp; <h5>デザイン</h5> &nbsp; <h5>ゲーム</h5>
+    </div>
 
 
 <div class="row">
@@ -27,6 +34,9 @@ $this->end();
                 <h6> <?php echo h($job['Job']['created']); ?></h6>
                 <h3> <?php echo h($job['Job']['title']); ?> </h3>
                 <p> <?php echo h($job['Job']['description']) ?></p>
+                <h5> <?php echo h($job['Category']['name']); ?> </h5>
+                <p><?php echo $this->Html->link('もっと見る>>', array('controller' => 'pages', 'action' => 'view', $job['Job']['id'])); ?></p>
+
 
                 <!--</div>-->
             </div>

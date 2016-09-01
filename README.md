@@ -1,10 +1,10 @@
-# SiteBase
+# JobSite
 
 ## 概要
-コーポレートサイトの雛形サイトです。
+求人サイトの雛形サイトです。
 CakePHP 2.8 で作成してます。
 
-![概要](https://raw.githubusercontent.com/y-sugiyama/SiteBase/master/webroot/img/sitebase.png)
+![概要](https://raw.githubusercontent.com/y-sugiyama/JobSite/master/webroot/img/jobsite.png)
 
 ## 要件
 
@@ -14,8 +14,8 @@ CakePHP 2.8 で作成してます。
 ## インストール方法
 
 ```
-$ git clone https://github.com/y-sugiyama/SiteBase.git
-$ cd SiteBase
+$ git clone https://github.com/y-sugiyama/JobSite.git
+$ cd JobSite
 $ composer install
 ```
 

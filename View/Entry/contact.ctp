@@ -53,10 +53,10 @@ $this->assign('title', 'エントリー');
             } ?>">
             <?php echo $this->Form->input('body', [
                 'type' => 'textarea',
-                'label' => 'お問い合わせ内容',
+                'label' => '備考',
                 'maxlength' => 3000,
                 'class' => 'form-control',
-                'placeholder' => 'お問い合せ内容'
+                'placeholder' => '備考(ご質問など)'
             ]);?>
         </div>
         <button class="btn btn-lg btn-primary" type="submit">送信</button>

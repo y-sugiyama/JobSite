@@ -138,6 +138,13 @@ class CreateJobsTable extends CakeMigration {
                      'categori_id'=>3,
                     'created' => '2016-08-23'
                 ],
+                 [
+                    'title' => 'デザイナー募集',
+                    'description' => '株式会社イリオモテヤマネコでは､以下の要項でデザイナーを'
+                    . '募集いたします｡年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                     'categori_id'=>5,
+                    'created' => '2016-09-01'
+                ],
                 ];
                 foreach ($datas as $data){
                     $job = new Job();

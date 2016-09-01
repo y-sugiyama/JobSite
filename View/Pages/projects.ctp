@@ -20,8 +20,17 @@ $this->end();
  <div class="categoryview" >
         <h4>カテゴリ一覧</h4>
    &nbsp;
-        <h5>Web/システム開発</h5> &nbsp; <h5>アプリ開発</h5> &nbsp; 
-        <h5>運用･保守</h5> &nbsp; <h5>デザイン</h5> &nbsp; <h5>ゲーム</h5>
+        
+        <h5><?php echo $this->Html->link('Web/システム開発', array('controller' => 'pages', 'action' => 'projects', $job['Job']['id'],'?' => ['categori_id' => 1]),['class' => 'btn btn-success']); ?>
+        </h5> 
+        <h5><?php echo $this->Html->link('アプリ開発', array('controller' => 'pages', 'action' => 'projects', $job['Job']['id'],'?' => ['categori_id' => 2]),['class' => 'btn btn-success']); ?>
+        </h5> 
+        <h5><?php echo $this->Html->link('運用･保守', array('controller' => 'pages', 'action' => 'projects', $job['Job']['id'],'?' => ['categori_id' => 3]),['class' => 'btn btn-success']); ?>
+        </h5> &nbsp; 
+        <h5><?php echo $this->Html->link('デザイン', array('controller' => 'pages', 'action' => 'projects', $job['Job']['id'],'?' => ['categori_id' => 4]),['class' => 'btn btn-success']); ?>
+        </h5> &nbsp; 
+        <h5><?php echo $this->Html->link('ゲーム', array('controller' => 'pages', 'action' => 'projects', $job['Job']['id'],'?' => ['categori_id' => 5]),['class' => 'btn btn-success']); ?>
+        </h5> &nbsp;
     </div>
 
 

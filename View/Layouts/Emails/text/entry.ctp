@@ -17,7 +17,7 @@
 <?php echo $this->fetch('content'); ?>
 <br>
 ---------------------------------------
-JobSite 問い合わせフォームより送信
+JobSite エントリーフォームより送信
 http://localhost:8000/pages/top
 
 This email was sent using the CakePHP Framework, http://cakephp.org.

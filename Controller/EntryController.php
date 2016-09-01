@@ -55,6 +55,8 @@ class EntryController extends AppController {
             
             //フォームに入力された値をセットして
             $this->Entry->set($this->request->data);
+            
+       
 
             //フォームから受け取ったデータをバリデーション
             if ($this->Entry->validates()) {
@@ -110,7 +112,7 @@ class EntryController extends AppController {
                         //ビューで使う変数をセット
                         ->viewVars($content)
                         //メール分で以下のテンプレートを使用
-                        ->template('contact', 'contact')
+                        ->template('entry', 'entry')
                         ->send();
     }
 

@@ -9,15 +9,27 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts.Email.text
+ * @package       app.View.Emails.text
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<?php echo $this->fetch('content'); ?>
-<br>
----------------------------------------
-JobSite 問い合わせフォームより送信
-http://localhost:8000/pages/top
+<!--自分が設定したメールアドレスへ送信するメッセージの内容-->
 
-This email was sent using the CakePHP Framework, http://cakephp.org.
+JobSiteエントリーフォームへ以下の内容が送信されました｡
+
+<!--エントリーフォームタイトル-->
+お問い合わせ:
+<?php echo $subject; ?>
+
+<!--問い合わせされた方の名前-->
+名前:
+<?php echo $name; ?>
+
+<!--問い合わせされた方のメールアドレス-->
+メールアドレス:
+<?php echo $email; ?>
+ 
+<!--問い合わせされた内容-->
+本文:
+<?php echo $body; 

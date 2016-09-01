@@ -109,7 +109,7 @@ class ContactController extends AppController {
                         ->from(array($content['email'] => $content['subject']))
                         //ビューで使う変数をセット
                         ->viewVars($content)
-                        //メール分で以下のテンプレートを使用
+                        //メール文で以下のテンプレートを使用
                         ->template('contact', 'contact')
                         ->send();
     }

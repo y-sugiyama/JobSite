@@ -115,5 +115,55 @@ class EntryController extends AppController {
                         ->template('entry', 'entry')
                         ->send();
     }
+    
+     public function projects() {
+        $this->loadModel('Job');
+
+        //else:  クエリストリングがなにもなければ$conditionには何もいれない
+        $conditions = null;
+        //'categori_id'が配列で送信されてきたら
+        if (isset($this->request->query['categori_id'])) {
+            //categori_idにその値を代入する
+            $conditions = [
+                'categori_id' => $this->request->query['categori_id']
+            ];
+        }
+
+        $this->Paginator->settings = $this->Job->getRecent(6);
+        //cookbook paginateのページに第2引数に$conditionsをとるとのこと
+        $jobs = $this->Paginator->paginate('Job', $conditions);
+
+
+        $this->set('jobs', $jobs);
+       
+        //リクエストがPOSTの場合
+        if ($this->request->is('post')) {
+            //Formの値を取得
+            $title = $this->request->data['Search']['title'];
+         
+            //POSTされたデータを曖昧検索
+              
+            $data = $this->Paginator->paginate('Job', [
+                'Job.title like' => '%' . $title . '%'
+            ]);
+
+            $this->set('jobs', $data);
+            
+        } 
+    }
+
+    public function view($id = null) {
+        $this->loadModel('Job');
+        //pages/projectsの｢もっと見る>>｣をおしたらviewに遷移するように
+        //$idで値を探して拾ってくる
+        if ($this->Job->exists($id)) {
+            $job = $this->Job->findById($id);
+            $this->set('job', $job);
+        }
+    }
+
+    public function search() {
+        
+    }
 
 }

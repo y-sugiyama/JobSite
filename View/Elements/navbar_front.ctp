@@ -24,7 +24,10 @@
                 <li><a href="/pages/p1">このサイトについて</a></li>
                 <li><a href="/pages/p2">アクセス</a></li>
                 <li><?php echo $this->Html->link('お知らせ', array('controller'=>'pages','action' => 'news')); ?></li>
-                <li><?php echo $this->Html->link('求人', array('controller'=>'pages','action' => 'projects')); ?></li>
+                
+                <li><?php echo $this->Html->link('求人検索', array('controller'=>'entry','action' => 'search')); ?></li>
+                <li><?php echo $this->Html->link('求人一覧', array('controller'=>'entry','action' => 'projects')); ?></li>
+         
                 <li><?php echo $this->Html->link('お問い合せ', array('controller'=>'contact','action' => 'contact')); ?></li>
             </ul>
 

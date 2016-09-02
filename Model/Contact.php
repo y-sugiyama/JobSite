@@ -27,6 +27,7 @@ class Contact extends AppModel
                 //バリデーションのルール
                 'rule' => array('notBlank'),
                 'message' => '未入力です。',
+                //データ配列にkey(この場合はname)が存在することを必要とする
                 'required' => true,
             ),
             //バリデーションの名前
@@ -44,6 +45,7 @@ class Contact extends AppModel
                 //バリデーションのルール
                 'rule' => array('notBlank'),
                 'message' => '未入力です。',
+                //データ配列にkey(この場合はemail)が存在することを必要とする
                 'required' => true,
             ),
             //バリデーションの名前

@@ -41,7 +41,10 @@
         <?php echo $this->fetch('topheader') ; ?>
         </div>
         
-        <div class="container">
+<!--        <div class="container">
+            <div id="header">
+			<h1> <?php // echo $this->fetch('css') ; ?></h1>
+		</div>-->
             
 		<?php echo $this->Session->flash(); ?>
                 

@@ -1,3 +1,8 @@
+<?php
+$this->assign('title', '求人詳細');
+?>
+
+
 <div class="jobs view">
 <h2><?php echo __('求人詳細'); ?></h2>
 

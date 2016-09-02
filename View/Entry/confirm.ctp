@@ -1,7 +1,6 @@
-<?php 
-//var_dump($this->request->data);
+<?php
+$this->assign('title', '確認画面');
 ?>
-
 
 <dl>
    

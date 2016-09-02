@@ -27,7 +27,7 @@ class CategoriesController extends AppController {
 
     public function isAuthorized($user) {
         // action配列の中に以下のアクションが含まれていたら
-        if (in_array($this->action, ['index', 'view', 'add', 'delete'])) {
+        if (in_array($this->action, ['index', 'view'])) {
 //            trueを返す(roleがadminでもuserでもそのactionにアクセスできる)
             return true;
         }

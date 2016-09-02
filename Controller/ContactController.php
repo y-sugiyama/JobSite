@@ -40,33 +40,33 @@ class ContactController extends AppController {
     }
 
     public function contact() {
-    $this->response->disableCache();
+
 //     
         //再編集で戻ってきたとき(getできた時)
         //Sessionを読み込んで変数contactにいれる
-        $contact=$this->Session->read('Contact');
-        
+        $contact = $this->Session->read('Contact');
+
         //変数contactがNULLでなければ
         if ($contact !== NULL) {
             //変数contactの値をフォームに代入する
             $this->request->data['Contact'] = $contact;
         }
-        //$this->request->data['Contact']=$this->Session->write('Contact');
-
+        $this->response->disableCache();
+        
         //postでフォームが送信されたら
         if ($this->request->is('post')) {
-
+            
             //フォームに入力された値をセットして
             //モデルに1つまたは複数のフィールドのデータをセット
-      //      $this->request->data=$this->Session->write('Contact');
+            //      $this->request->data=$this->Session->write('Contact');
             $this->Contact->set($this->request->data);
-           
+
             //フォームから受け取ったデータをバリデーション
             if ($this->Contact->validates()) {
 
                 //検証がOkならSessionへフォームに入力されたデータを書き込む
                 $this->Session->write('Contact', $this->request->data['Contact']);
-                
+
                 $this->redirect(array('action' => 'confirm'));
             }
             $this->Flash->danger('入力内容に不備があります。');
@@ -74,14 +74,12 @@ class ContactController extends AppController {
     }
 
     public function confirm() {
-                    //ブラウザ に対して、現在のリクエストをキャッシュしないように伝える
+        //ブラウザ に対して、現在のリクエストをキャッシュしないように伝える
 //        $this->response->disableCache();
 //     
-        
-  
         //Sessionを読み込んで変数contactにいれる(getできた時)
         $contact = $this->Session->read('Contact');
-        
+
 
         //getできたら値を$contactにセットする
         $this->set('contact', $contact);
@@ -103,7 +101,7 @@ class ContactController extends AppController {
     }
 
     public function finished() {
-       
+        
     }
 
     private function sendContact($content) {

@@ -44,8 +44,8 @@ class EntryController extends AppController {
         //再編集で戻ってきたとき(getできた時)
         //Sessionを読み込んで変数contactにいれる
         $contact = $this->Session->read('Entry');
-        //変数contactがNULLでなければ
-        if($contact!==NULL){
+        //変数contactがNULLでなければ(セッションに値が入っているとき)
+        if($contact!==NULL && empty($this->request->data)){
             //変数contactの値をフォームに代入する
             $this->request->data['Entry'] = $contact;
         }
@@ -82,7 +82,7 @@ class EntryController extends AppController {
             if ($this->sendContact($contact)) {
                 $this->Flash->success('お問い合わせを受け付けました。');
                     //sessionを破棄する
-                $this->Session->delete('Contact');
+                $this->Session->delete('Entry');
                 //それからリダイレクトする
                 $this->redirect(array('action' => 'finished'));
             
@@ -136,6 +136,7 @@ class EntryController extends AppController {
 
         $this->set('jobs', $jobs);
        
+        //タイトル検索
         //リクエストがPOSTの場合
         if ($this->request->is('post')) {
             //Formの値を取得
@@ -150,6 +151,21 @@ class EntryController extends AppController {
             $this->set('jobs', $data);
             
         } 
+        //キーワード検索
+         //リクエストがPOSTの場合
+        if ($this->request->is('post')) {
+            //Formの値を取得
+            $keyword = $this->request->data['Search']['title'];
+         
+            //POSTされたデータを曖昧検索
+              
+            $text = $this->Paginator->paginate('Job', [
+                'Job.description like' => '%' . $keyword . '%'
+            ]);
+
+            $this->set('jobs', $text);
+            
+        } 
     }
 
     public function view($id = null) {
@@ -162,8 +178,6 @@ class EntryController extends AppController {
         }
     }
 
-    public function search() {
-        
-    }
+    
 
 }

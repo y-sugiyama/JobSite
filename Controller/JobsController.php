@@ -81,6 +81,7 @@ class JobsController extends AppController {
      * @return void
      */
     public function add() {
+         $this->loadModel('Category');
         //フォームが送信されたら
         if ($this->request->is('post')) {
             //空にして
@@ -95,6 +96,10 @@ class JobsController extends AppController {
             }
             $this->Flash->danger('求人案件が正常に保存されませんでした､再度追加をしてください.');
         }
+        
+        $this->set('categories', $this->Category->find('list',[
+            'fields' => ['id', 'name']
+        ]));
     }
 
     /**

@@ -4,17 +4,20 @@ $this->assign('title', 'JobSite 求人詳細');
 <?php
 $this->start('topheader');
 ?>
-<div class="topbackground1">
+<div class="topbackground1" id="job">
     <div class="container">
         <h1>JobSite 求人</h1>
-        <p class="lead">  </div>
+        <p class="lead">          
+    </div>
+ 
 
-</div>
 
 <?php
 $this->end();
 ?>
 
+
+    
 <!-- Example row of columns -->
 
  <div class="categoryview" >
@@ -32,6 +35,42 @@ $this->end();
         <h5><?php echo $this->Html->link('ゲーム', array('controller' => 'entry', 'action' => 'projects', $job['Job']['id'],'?' => ['categori_id' => 5]),['class' => 'btn btn-success']); ?>
         </h5> &nbsp;
     </div>
+
+   <div class="row" id="jobs">
+    <div class="col-md-2" id="jobsearch"> 
+        
+            <!-- Default panel contents -->
+          
+                <?php
+                echo $this->Form->create('Search', [
+                    'url' => ['controller' => 'entry', 'action' => 'projects']
+                ]);
+                ?>
+                 <!--<span class="input-group-addon" id="basic-addon1">@</span>-->
+                <div class="form-group" id="jobsearch" <?php
+                         if ($this->Form->isFieldError('title')) {
+                             echo 'has-error';
+                         }
+                         ?>">
+                         <?php
+                         echo $this->Form->input('title', [
+                             'label' => 'キーワード',
+                             'class' => 'form-control',
+                             'placeholder' => '求人案件から検索します'
+                         ]);
+                         ?>
+
+                </div>
+                <button class="btn btn-sm btn-primary" id="jobsearch" type="submit">検索</button>
+
+<?php echo $this->Form->end(); ?>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
 
 
 <div class="row">

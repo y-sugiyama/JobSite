@@ -204,6 +204,14 @@ Configure::write('App.encoding', 'UTF-8');
  */
 Configure::write('Session', array(
 		'defaults' => 'php',
+ 'timeout' => 3*60, // タイムアウト[min]
+    'autoRegenerate' => true, // アクセスごとにセッション再発行
+    'ini' => array(
+        'session.gc_maxlifetime' => 3*60*60, // GC寿命[sec](≧タイムアウト)
+        'session.gc_probability' => 1,   // GC確率分子
+        'session.gc_divisor' => 100, // GC確率分母
+        'session.cookie_lifetime' => 0,  // ブラウザを閉じたら終了   
+)
 	));
 
 /**

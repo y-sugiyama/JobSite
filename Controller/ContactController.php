@@ -46,13 +46,16 @@ class ContactController extends AppController {
         //Sessionを読み込んで変数contactにいれる
         $contact = $this->Session->read('Contact');
 
-        //変数contactがNULLでなければ
-        if ($contact !== NULL) {
+        //変数contactがNULLでなければ(セッションに値が入っているとき)
+//    
+        if ($contact !== NULL && empty($this->request->data)) {
+            
             //変数contactの値をフォームに代入する
             $this->request->data['Contact'] = $contact;
         }
-        $this->response->disableCache();
         
+      
+       
         //postでフォームが送信されたら
         if ($this->request->is('post')) {
             

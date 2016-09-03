@@ -33,6 +33,48 @@ $this->assign('title', 'エントリー');
             ]);
             ?>
         </div>
+        
+        <div class="form-group <?php if ($this->Form->isFieldError('age')) {
+                echo 'has-error';
+            } ?>">
+            <?php
+            echo $this->Form->input('age', [
+                'type' => 'text',
+                'label' => '年齢',
+                'maxlength' => 255,
+                'class' => 'form-control',
+                'placeholder' => '31'
+            ]);
+            ?>
+        </div>
+        
+        <div class="form-group <?php if ($this->Form->isFieldError('tel')) {
+                echo 'has-error';
+            } ?>">
+            <?php
+            echo $this->Form->input('tel', [
+                'type' => 'text',
+                'label' => '電話番号',
+                'maxlength' => 255,
+                'class' => 'form-control',
+                'placeholder' => '080-0000-0000'
+            ]);
+            ?>
+        </div>
+        
+        <div class="form-group <?php if ($this->Form->isFieldError('address')) {
+                echo 'has-error';
+            } ?>">
+            <?php
+            echo $this->Form->input('address', [
+                'type' => 'text',
+                'label' => '住所',
+                'maxlength' => 255,
+                'class' => 'form-control',
+                'placeholder' => '東京都品川区蒲田5'
+            ]);
+            ?>
+        </div>
 
         <div class="form-group <?php if ($this->Form->isFieldError('subject')) {
                 echo 'has-error';

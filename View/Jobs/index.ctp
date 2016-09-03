@@ -2,7 +2,7 @@
 
 <div class="jobs index">
 
-    <div class="container">
+    <div class="container" id="job">
 
         <!-- content -->
         <div class="row" style="padding:5px 0 0 0">
@@ -14,8 +14,8 @@
             </div>
 
             <!-- center -->
-            <div class="col-md-9" style="background-color:white">
-                <h2><?php echo '求人一覧'; ?></h2>
+            <div class="col-md-9" id="job" style="background-color:white">
+                <h3><?php echo '求人一覧'; ?></h3>
 
 
                 <p><?php echo $this->Html->link('新規追加', array('controller' => 'jobs', 'action' => 'add'),['class' => 'btn btn-default']); ?></p>
@@ -25,7 +25,10 @@
                 <table class="table table-striped">
                     <tr>
                         <th>タイトル</th>
-                        <th>内容</th>
+                        <th>仕事内容</th>
+                        <th>給与</th>
+                        <th>エリア</th>
+                        <th>会社名</th>
                         <th>カテゴリ</th>
                         <th>作成日</th>
                         <th>アクション</th>
@@ -44,6 +47,9 @@
                                 
                                             
                                 ?>&nbsp;</td>
+                            <td><?php echo h($job['Job']['salary']); ?>&nbsp;</td>
+                             <td><?php echo h($job['Job']['area']); ?>&nbsp;</td>
+                              <td><?php echo h($job['Job']['companyname']); ?>&nbsp;</td>
                             <td><?php echo h($job['Category']['name']); ?>&nbsp;</td>
                             <td><?php echo h($job['Job']['created']); ?>&nbsp;</td>
                             <td class="actions">

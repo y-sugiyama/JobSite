@@ -20,7 +20,7 @@ $this->assign('title', '確認画面');
 
  <?php
 $options = array(
-        'class' => 'btn btn-default'
+        'class' => 'btn btn-default',
         
     );
 

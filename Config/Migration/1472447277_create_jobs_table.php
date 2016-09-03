@@ -37,6 +37,22 @@ class CreateJobsTable extends CakeMigration {
                         'null' => false,
                         'default' => null
                     ),
+                    'salary' => array(
+                        'type' => 'integer',
+                        'length' => 3,
+                        'null' => false,
+                        'default' => null
+                    ),
+                    'area' => array(
+                        'type' => 'string',
+                        'null' => false,
+                        'default' => null
+                    ),
+                    'companyname' => array(
+                        'type' => 'string',
+                        'null' => false,
+                        'default' => null
+                    ),
                     'categori_id' => array(
                         'type' => 'integer',
                         'null' => false,
@@ -88,15 +104,21 @@ class CreateJobsTable extends CakeMigration {
                 [
                     'title' => 'デザイナー募集',
                     'description' => '株式会社シマウマでは､以下の要項でデザイナーを'
-                    . '募集いたします｡年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                    . '募集いたします｡募集人数１名 スキルセット◯◯◯◯◯◯',
+                    'salary' =>800,
+                    'area' => '東京都',
+                    'companyname' => '株式会社シマウマ',
                     'categori_id'=>1,
                     'created' => '2016-08-27'
                 ],
                 [
                     'title' => 'エンジニア募集',
                     'description' => '株式会社まるい政策研究所では､'
-                    . '以下の要項でエンジニアを募集いたします｡年収800万円 '
+                    . '以下の要項でエンジニアを募集いたします｡ '
                     . '募集人数１名 スキルセット◯◯◯◯◯◯',
+                     'salary' =>800,
+                    'area' => '東京都',
+                    'companyname' => '株式会社まるい制作研究所',
                     'categori_id'=>2,
                     'created' => '2016-08-28'
                 ],
@@ -104,7 +126,10 @@ class CreateJobsTable extends CakeMigration {
                     'title' => 'クリエイター募集',
                    'description' => '株式会社ぱんだメディアでは､'
                     . '以下の要項でクリエイターを募集いたします｡'
-                    . '年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                    .  '募集人数１名 スキルセット◯◯◯◯◯◯',
+                     'salary' =>800,
+                    'area' => '東京都',
+                    'companyname' => '株式会社ぱんだメディア',
                     'categori_id'=>3,
                     'created' => '2016-08-29'
                 ],
@@ -112,36 +137,51 @@ class CreateJobsTable extends CakeMigration {
                     'title' => 'クリエイター募集',
                    'description' => '株式会社ぱんだメディアでは､'
                     . '以下の要項でクリエイターを募集いたします｡'
-                    . '年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                    . '募集人数１名 スキルセット◯◯◯◯◯◯',
+                      'salary' =>800,
+                      'area' => '東京都',
+                    'companyname' => '株式会社ぱんだメディア',
                      'categori_id'=>4,
                     'created' => '2016-08-27'
                 ],
                 [
                     'title' => 'エンジニア募集',
-                    'description' => '株式会社まるい政策研究所では､'
-                    . '以下の要項でエンジニアを募集いたします｡年収800万円 '
+                    'description' => '株式会社まるい制作研究所では､'
+                    . '以下の要項でエンジニアを募集いたします｡ '
                     . '募集人数１名 スキルセット◯◯◯◯◯◯',
+                     'salary' =>800,
+                    'area' => '東京都',
+                    'companyname' => '株式会社まるい政策研究所',
                     'categori_id'=>1,
                     'created' => '2016-08-26'
                 ],
                  [
                     'title' => 'デザイナー募集',
                     'description' => '株式会社シマウマでは､以下の要項でデザイナーを'
-                    . '募集いたします｡年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                    . '募集いたします｡募集人数１名 スキルセット◯◯◯◯◯◯',
+                      'salary' =>800,
+                     'area' => '東京都',
+                     'companyname' => '株式会社シマウマ',
                      'categori_id'=>2,
                     'created' => '2016-08-25'
                 ],
                  [
                     'title' => 'アーキテクト募集',
                     'description' => '株式会社カピパラでは､以下の要項でデザイナーを'
-                    . '募集いたします｡年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                    . '募集いたします｡募集人数１名 スキルセット◯◯◯◯◯◯',
+                      'salary' =>800,
+                     'area' => '東京都',
+                     'companyname' => '株式会社カピパラ',
                      'categori_id'=>3,
                     'created' => '2016-08-23'
                 ],
                  [
                     'title' => 'デザイナー募集',
                     'description' => '株式会社イリオモテヤマネコでは､以下の要項でデザイナーを'
-                    . '募集いたします｡年収800万円 募集人数１名 スキルセット◯◯◯◯◯◯',
+                    . '募集いたします｡ 募集人数１名 スキルセット◯◯◯◯◯◯',
+                      'salary' =>800,
+                     'area' => '東京都',
+                     'companyname' => '株式会社イリオモテヤマネコ',
                      'categori_id'=>5,
                     'created' => '2016-09-01'
                 ],

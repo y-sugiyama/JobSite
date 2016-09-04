@@ -17,46 +17,46 @@ body{
 
 .topimage {
     /*webroot/css配下のどこか､という記述になる*/
-      background: url("/img/jobsite.jpg");
-      background-position: center center;
-      /*画像を画面に合わせて表示*/
-      background-size: cover;
-      height: 700px;
-      color: #fff;
-      /*親要素*/
-      position: relative;
-    }
-    
-    .squere{
-        background-color: orangered;
-        /*透過性*/
-        opacity: 0.8;
-        padding: 15px 15px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height:150px;
-        /*左寄せする要素を、親要素を基準left:0の絶対位置に配置する。*/
-        position: absolute; left: 0
-        
-    }
-    
+    background: url("/img/jobsite.jpg");
+    background-position: center center;
+    /*画像を画面に合わせて表示*/
+    background-size: cover;
+    height: 700px;
+    color: #fff;
+    /*親要素*/
+    position: relative;
+}
+
+.squere{
+    background-color: orangered;
+    /*透過性*/
+    opacity: 0.8;
+    padding: 15px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height:150px;
+    /*左寄せする要素を、親要素を基準left:0の絶対位置に配置する。*/
+    position: absolute; left: 0
+
+}
+
 
 .col-lg-4 {
-     padding: 40px 40px;
+    padding: 40px 40px;
     padding-bottom: 70px;
     text-align:center;
-    
+
 }
 
 .col-lg-4 h2{
     padding-bottom: 20px;
     text-align:center;
-  
+
 }
 
 .col-lg-4 p{
-     display:table-cell;
+    display:table-cell;
     text-align:left;
     vertical-align:middle;
 }
@@ -75,17 +75,17 @@ body{
     width:80%;
 }
 .panel-title a {
-/*    display:block;*/
+    /*    display:block;*/
 }
 
 .panel-heading h4{
-display: inline;
+    display: inline;
 }
 
 .panel-heading h6{
-display: inline;
-float: right;
-margin-top:4px; 
+    display: inline;
+    float: right;
+    margin-top:4px; 
 
 }
 /*p1.ctp*/
@@ -93,9 +93,9 @@ margin-top:4px;
 
 
 #pageheader{
-margin-top: -20px;
-padding-left: 0;
-padding-right: 0;
+    margin-top: -20px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .topbackground1{
@@ -103,13 +103,13 @@ padding-right: 0;
     margin: 0 auto;
     height:350px;
     /*background-color: skyblue;*/
-        background: url("/img/brown.jpg");
-      background-position: center center;
-      /*画像を画面に合わせて表示*/
-      background-size: cover;
-       
+    background: url("/img/brown.jpg");
+    background-position: center center;
+    /*画像を画面に合わせて表示*/
+    background-size: cover;
+
     color: #ffffff;
-    
+
 }
 
 
@@ -123,23 +123,23 @@ padding-right: 0;
 }
 
 .row{
-padding-top: 5px; 
+    padding-top: 5px; 
 }
 
 .col-md-8{
-    
+
 }
 
 #pages.col-md-4{
     background-color: lemonchiffon;
     padding-right:5px;
-   
+
 }
 /*p2.ctp*/
 
 /*news.ctp*/
 .thumbnail{
-      padding: 20px 20px 20px 10px  ; 
+    padding: 20px 20px 20px 10px  ; 
 }
 
 .glyphicon-info-sign{
@@ -150,7 +150,7 @@ padding-top: 5px;
     /*背景色を透明に*/
     background-color:  transparent;
     margin-top: 10px;
-    
+
 }
 
 #news h3{
@@ -163,11 +163,11 @@ padding-top: 5px;
 
 /*projects.ctp*/
 .categoryview{
-     
-     padding: 10px 10px 10px 10px;
-     margin-top: 10px;
-     height: 50px;
-    
+
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    height: 50px;
+
 }
 .categoryview h5{
     display: inline;
@@ -183,7 +183,7 @@ padding-top: 5px;
     /*背景色を透明に*/
     background-color:  transparent;
     margin-top: 10px;
-    
+
 }
 
 #projects h3{
@@ -210,13 +210,17 @@ padding-top: 5px;
 }
 
 #contact.row{
-      margin-top: 20px;
-      
+    margin-top: 20px;
+
 }
 
 #jobs.row{
-      margin-top: -20px;
-      
+    margin-top: -20px;
+
+}
+
+#jobsview{
+    margin-left: 10px;
 }
 
 
@@ -228,8 +232,8 @@ padding-top: 5px;
 
 #login.panel-heading{
     padding: 10px 10px;
-    
-    
+
+
 }
 #login.panel-heading h4{
 
@@ -238,15 +242,25 @@ padding-top: 5px;
 
 
 
-#jobsearch.col-md-2{
-  display: inline;
+#jobsearch.col-md-3{
+    display: inline-block;
     float: right;  
+    text-align: right;
     margin-top: -30px;
     margin-right: 10px; 
 }
+#jobsearch.form-group{
+    display: inline-block;
+    text-align: left;
+
+}
+#jobsearch.btn btn-sm btn-primary{
+    display: inline-block;
+    float: right;   
+}
 /*#header h1 {
-	line-height:20px;
-	background: #003d4c url('/img/bara.png') no-repeat left;
-	color: #fff;
-	padding: 0 30px;
+        line-height:20px;
+        background: #003d4c url('/img/bara.png') no-repeat left;
+        color: #fff;
+        padding: 0 30px;
 }*/

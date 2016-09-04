@@ -37,7 +37,7 @@ $this->end();
     </div>
 
    <div class="row" id="jobs">
-    <div class="col-md-2" id="jobsearch"> 
+    <div class="col-md-3" id="jobsearch"> 
         
             <!-- Default panel contents -->
           
@@ -56,7 +56,7 @@ $this->end();
                          echo $this->Form->input('title', [
                              'label' => 'キーワード',
                              'class' => 'form-control',
-                             'placeholder' => '求人案件から検索します'
+                             'placeholder' => '求人案件から検索'
                          ]);
                          ?>
 

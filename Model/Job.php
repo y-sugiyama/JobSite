@@ -41,6 +41,11 @@ class Job extends AppModel {
             'className' => 'Category',
              'foreignKey' => 'categori_id'
           
+        ),
+                 'Area' => array(
+            'className' => 'Area',
+             'foreignKey' => 'area_id'
+          
         )
          );
 
